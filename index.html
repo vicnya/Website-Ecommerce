@@ -1,15 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Site E-commerce</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes shopping online</title>
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="css/icofont.min.css">
+  <!-- Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS  -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <!-- nav -->
-     <!-- header -->
-      <!-- main -->
-       <!-- footer -->
+  <header class="header">
+    <!-- Navbar-->
+    <nav>
+      <p class="logo">Vix-Shopping</p>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">A propos</a></li>
+        <li class="dropdown">
+          <a href="boutique.html">Boutique</a>
+          <ul class="dropdown-content">
+            <li><a href="boutique.html#bestsellers">Les plus vendus</a></li>
+            <li><a href="boutique.html#nosProduits">Nos produits</a></li>
+            <li><a href="boutique.html#chaussurePhare">Chaussure phare</a></li>
+            <li><a href="boutique.html#galerie">Galerie</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html">Services Client</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-icons">
+        <a href="#"><i class="icofont-heart"></i></a>
+        <a href="#"><i class="icofont-shopping-cart"></i></a>
+      </div>
+    </nav>
+
+    <!-- Section Héro -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Site de vente de chaussures enligne</h1>
+        <p>Trouvez des chaussures de qualité et de marque</p>
+        <a href="boutique.html" class="btn">Voir la boutique</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- PRODUITS -->
+    <!-- Nouveaux produits -->
+    <section class="recent-product">
+      <h2>Nouveaux Produits</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img/Chaussure 1.jpg" alt="Nike SB" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Nike SB</h3>
+            <p class="card-price">49.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/chaussure 2.jpg" alt="New Balance" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">New Balance</h3>
+            <p class="card-price">59.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/chaussure 3.jpg" alt="Adidas SAMBA" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Adidas SAMBA</h3>
+            <p class="card-price">39.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/chaussure 4.jpg" alt="Vans old school" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Vans old school</h3>
+            <p class="card-price">79.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produits Bestsellers -->
+    <section class="bestsellers">
+      <h2>Produits les plus vendus</h2>
+      <div class="cards">
+
+        <div class="card">
+          <img src="img/chaussure 4.jpg" alt="Produit 4" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Top 1</h3>
+            <p class="card-price">99.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/chaussure 5.jpg" alt="Produit 5" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Top 2</h3>
+            <p class="card-price">89.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/chaussure 6.jpg" alt="Produit 6" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Top 3</h3>
+            <p class="card-price">79.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/chaussure 7.jpg" alt="Produit 7" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Top 4</h3>
+            <p class="card-price">69.99€</p>
+            <a href="#" class="btn">Commander</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <h2>Inscrivez-vous à notre newsletter</h2>
+      <form>
+        <input type="email" placeholder="Votre adresse e-mail">
+        <button type="submit" class="btn">S'inscrire</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Mentions</h3>
+        <p>Mentions légales</p>
+        <p>CGU</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <p><a href="index.html">Accueil</a></p>
+        <p><a href="about.html">A propos</a></p>
+        <p><a href="boutique.html">Boutique</a></p>
+        <p><a href="services.html">Services client</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><i class="icofont-location-pin"></i> 24 Rue de la Mode, Paris 75000</p>
+        <p><i class="icofont-ui-clock"></i> Lun-Sam: 9h-19h</p>
+        <p><i class="icofont-phone"></i> 01 23 45 67 89</p>
+        <p><i class="icofont-email"></i> contact@vix-shopping.com</p>
+      </div>
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <i class="icofont-facebook"></i>
+        <i class="icofont-instagram"></i>
+        <i class="icofont-twitter"></i>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 DecoArtistic. Tous droits réservés.</p>
+  </footer>
+  <script src="js/javascript.js"></script>
 </body>
+
 </html>

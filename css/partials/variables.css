@@ -1,0 +1,13 @@
+/* Variables */
+
+:root {
+    /* Colors */
+    --primary: #c8ff00;
+    --white: #fff;
+    --background: #25262a;
+    --alt:silver;
+    /* typo */
+--typo-main: Raleway, sans-serif;
+--typo-secondary: 'Josefin Sans', sans-serif;
+}
+

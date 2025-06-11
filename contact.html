@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Vix-Shopping</title>
+  <link rel="stylesheet" href="css/icofont.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav>
+      <p class="logo">Vix-Shopping</p>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html" class="active">A propos</a></li>
+        <li class="dropdown">
+          <a href="boutique.html">Boutique</a>
+          <ul class="dropdown-content">
+            <li><a href="boutique.html#bestsellers">Les plus vendus</a></li>
+            <li><a href="boutique.html#nosProduits">Nos produits</a></li>
+            <li><a href="boutique.html#chaussurePhare">Chaussure phare</a></li>
+            <li><a href="boutique.html#galerie">Galerie</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html">Services Client</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="#"><i class="icofont-heart"></i></a>
+        <a href="#"><i class="icofont-shopping-cart"></i></a>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- Contact hero -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Contactez-nous</h1>
+        <p>Une question ? Un besoin ? Nous sommes là pour vous aider.</p>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="container">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required />
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service" name="service" required>
+              <option value="">Sélectionnez un service </option>
+              <option value="livraison">Livraison</option>
+              <option value="paiement">Paiement</option>
+              <option value="retour">Retour</option>
+              <option value="service">Service après-vente</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="commentaire">Commentaire</label>
+            <textarea id="commentaire" name="commentaire" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Mentions</h3>
+        <p>Mentions légales</p>
+        <p>CGU</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <p><a href="index.html">Accueil</a></p>
+        <p><a href="about.html">A propos</a></p>
+        <p><a href="boutique.html">Boutique</a></p>
+        <p><a href="services.html">Services client</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><i class="icofont-location-pin"></i> 24 Rue de la Mode, Paris 75000</p>
+        <p><i class="icofont-ui-clock"></i> Lun-Sam: 9h-19h</p>
+        <p><i class="icofont-phone"></i> 01 23 45 67 89</p>
+        <p><i class="icofont-email"></i> contact@vix-shopping.com</p>
+      </div>
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+          <a href="#"><i class="icofont-facebook"></i></a>
+          <a href="#"><i class="icofont-instagram"></i></a>
+          <a href="#"><i class="icofont-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Vix-Shopping. Tous droits réservés.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+/* Regles générales */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 200vh;
+  font-family: var(--typo-main);
+}

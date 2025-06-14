@@ -1,5 +1,5 @@
 
-  const burger = document.getElementById('burger');
+  const burger = document.querySelector('.burger');
   const navLinks = document.querySelector('.nav-links');
 
   burger.addEventListener('click', () => {

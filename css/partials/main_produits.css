@@ -1,3 +1,4 @@
+/* CSS produits dans la page acceuil/index(Section main) */
 /* Style général des sections */
 .recent-product,
 .bestsellers,
@@ -39,7 +40,7 @@
   margin: 10px auto;
 }
 
-/* Conteneur de cartes */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -48,7 +49,6 @@
   justify-items: center;
 }
 
-/* Style des cartes */
 .card {
   background: var(--white);
   border-radius: 8px;
@@ -158,4 +158,125 @@
   border-radius: 4px;
   font-size: 1rem;
   width: 100%;
+}
+
+
+
+/* Responsive Desktop (1025px et plus) */
+@media screen and (min-width: 1025px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+  }
+  
+  .card {
+    max-width: 320px;
+  }
+  
+  .card-img {
+    height: 220px;
+  }
+  
+  .newsletter form {
+    flex-direction: row;
+    max-width: 700px;
+  }
+  
+  .newsletter input {
+    flex-grow: 1;
+  }
+}
+
+/* Reponsive Tablette (641px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 641px) {
+  .recent-product,
+  .bestsellers,
+  .newsletter {
+    padding: 1.5rem;
+  }
+  
+  .cards {
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .card {
+    max-width: 280px;
+  }
+  
+  .card-img {
+    height: 180px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-price {
+    font-size: 1.2rem;
+  }
+  
+  .newsletter form {
+    max-width: 450px;
+  }
+}
+
+/* Responsive Mobile (640px et moins) */
+@media screen and (max-width: 640px) {
+  .recent-product,
+  .bestsellers,
+  .newsletter {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .recent-product h2,
+  .bestsellers h2,
+  .newsletter h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+  
+  .card-img {
+    height: 160px;
+  }
+  
+  .card-content {
+    padding: 0.8rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-price {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .newsletter form {
+    margin: 1rem auto;
+  }
+  
+  .newsletter input {
+    padding: 0.6rem;
+  }
+  
+  .bestsellers .card::after {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
 }

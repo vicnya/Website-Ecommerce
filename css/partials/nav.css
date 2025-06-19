@@ -1,3 +1,4 @@
+
 /* Navbar */
 nav {
   display: flex;
@@ -9,83 +10,65 @@ nav {
   top: 0;
   width: 100%;
   z-index: 999;
+}
 
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
-    flex: 1;
-  }
+nav .logo {
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  flex: 1;
+}
 
-  .nav-links {
-    padding-left: 2rem;
-    display: flex;
+nav .nav-links {
+  padding-right: 2.5rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
 
-    list-style: none;
-    gap: 1.2rem;
+nav .nav-links li {
+  position: relative;
+}
 
-    li {
-      position: relative;
+nav .nav-links li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-      a {
-        text-decoration: none;
-        color: var(--white);
-        font-weight: 500;
-        transition: color 0.3s ease;
+nav .nav-links li a:hover {
+  color: var(--primary);
+}
 
-        &:hover {
-          color: var(--primary);
-        }
-      }
+nav .nav-links li.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-      &.dropdown:hover .dropdown-content {
-        display: block;
-      }
+nav .nav-links .dropdown-content {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: var(--background);
+  padding: 0.5rem;
+  border: 1px solid --alt;
+  min-width: 150px;
+}
 
-      .dropdown-content {
-        list-style: none;
-        display: none;
-        position: absolute;
-        top: 100%;
-        background: #1a1a1a;
-        padding: 0.5rem;
-        border: 1px solid #333;
+nav .nav-links .dropdown-content li {
+  padding: 0.3rem 0;
+}
 
-        li {
-          padding: 0.3rem 0;
+nav .nav-links .dropdown-content li a {
+  font-size: 0.85rem;
+  color: var(--white);
+  white-space: nowrap;
+}
 
-          a {
-            font-size: 0.85rem;
-            color: var(--white);
-
-            &:hover {
-              color: var(--primary);
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-
-  .nav-icons {
-    text-decoration: none;
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-
-
-    a {
-      color: var(--white);
-      font-size: 1.2rem;
-
-      &:hover {
-        color: var(--primary);
-      }
-    }
-  }
+nav .nav-links .dropdown-content li a:hover {
+  color: var(--primary);
 }
 
 .burger {
@@ -103,8 +86,50 @@ nav {
   border-radius: 2px;
 }
 
+/* Responsive (Desktop - 1025px et plus) */
+@media screen and (min-width: 1025px) {
+  nav .nav-links {
+    gap: 2rem;
+  }
+  
+  nav .logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsive Tablette (641px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 641px) {
+  nav .nav-links {
+    gap: 0.8rem;
+    padding-right: 1.5rem;
+  }
+  
+  nav .logo {
+    padding-left: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  nav .nav-links li a {
+    font-size: 0.9rem;
+  }
+  
+  .dropdown-content {
+    right: 0;
+  }
+}
+
+/* Responsive Mobile (640px et moins) */
 @media screen and (max-width: 640px) {
-  .nav-links {
+  nav {
+    padding: 1rem 0.5rem;
+  }
+  
+  nav .logo {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  nav .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -114,13 +139,45 @@ nav {
     width: 200px;
     padding: 1rem;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    gap: 0.5rem;
   }
-
-  .nav-links.active {
+  
+  nav .nav-links.active {
     display: flex;
   }
-
+  
+  nav .nav-links li {
+    padding: 0.5rem 0;
+  }
+  
+  nav .nav-links .dropdown-content {
+    position: static;
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0 0 1rem;
+    display: none;
+  }
+  
+  nav .nav-links li.dropdown:hover .dropdown-content,
+  nav .nav-links li.dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  
   .burger {
+    padding-right: 1rem;
     display: flex;
+  }
+  
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }

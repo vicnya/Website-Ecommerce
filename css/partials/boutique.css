@@ -1,6 +1,7 @@
 /* Section hero boutique */
 .boutique-hero {
     height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -16,6 +17,7 @@
 .hero-text {
     flex: 1;
     padding: 2rem;
+    min-width: 300px;
 }
 
 .hero-text h1 {
@@ -23,12 +25,16 @@
     font-family: var(--typo-secondary);
     color: var(--primary);
     margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: var(--alt);
+    line-height: 1.6;
+    max-width: 500px;
 }
 
 .hero-text .btn {
@@ -38,29 +44,39 @@
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .hero-text .btn:hover {
     color: var(--white);
     background: var(--background);
-
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image {
     flex: 1;
     padding: 2rem;
     text-align: center;
+    animation: float 6s ease-in-out infinite;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 500px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
 /* Produit Best sellers */
-
 .best-sellers,
 .shop-shoe,
 .valeurs {
@@ -79,15 +95,33 @@
     color: var(--primary);
 }
 
+.best-sellers h2::after,
+.shop-shoe h2::after,
+.valeurs h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+    margin: 10px auto;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2rem;
     justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product-card {
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .product-card img {
@@ -96,11 +130,13 @@
     height: auto;
     border-radius: 6px;
     margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-card p {
     color: var(--background);
     font-weight: 500;
+    margin-top: 0.5rem;
 }
 
 /*Nos produits */
@@ -130,9 +166,15 @@
     background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.boutique-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .boutique-card img {
@@ -161,6 +203,7 @@
     font-weight: bold;
     color: var(--primary);
     font-size: 1.1rem;
+    margin: 0.5rem 0;
 }
 
 /* Pagination */
@@ -183,12 +226,13 @@
     border-radius: 4px;
     font-family: var(--typo-main);
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .pagination li:hover {
     background: var(--primary);
     color: var(--background);
+    transform: translateY(-2px);
 }
 
 /* Chaussure phare */
@@ -198,17 +242,26 @@
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shoe-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
 }
 
 .shoe-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .shoe-product {
     flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -218,6 +271,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.shoe-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
 }
 
 /* boutton */
@@ -236,7 +298,8 @@
 .btn:hover {
     color: var(--white);
     background: var(--background);
-
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Galerie */
@@ -258,6 +321,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .gallery-item {
@@ -265,7 +330,8 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    aspect-ratio: 1/1;
 }
 
 .gallery-item img {
@@ -276,11 +342,14 @@
     transition: transform 0.3s ease;
 }
 
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 .gallery-item:hover img {
     transform: scale(1.05);
 }
-
-
 
 /* Vision */
 .vision {
@@ -291,40 +360,173 @@
     justify-content: space-between;
     gap: 2rem;
     background-color: #f9f9f9;
+    padding: 3rem 2rem;
 }
 
 .vision-text {
     flex: 1;
     padding: 2rem;
+    min-width: 300px;
+}
+
+.vision-text h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    font-family: var(--typo-secondary);
+    margin-bottom: 1rem;
 }
 
 .vision-text p {
     margin: 1rem 0 2rem;
     color: #444;
     max-width: 500px;
+    line-height: 1.6;
 }
-
 
 .vision-image {
     flex: 1;
-
+    min-width: 300px;
+    text-align: center;
 }
 
 .vision-image img {
     max-width: 500px;
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 768px) {
 
-    .look-grid,
-    .valeurs {
+
+/* Responsive Tablette (769px - 1024px) */
+@media (max-width: 1024px) {
+    .boutique-hero {
+        height: auto;
+        padding: 3rem 2rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .boutique-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .shoe-grid {
         flex-direction: column;
     }
+    
+    .shoe-image {
+        order: -1;
+    }
+}
 
-    .hero-text,
+/* Responsive Mobile (481px - 768px) */
+@media (max-width: 768px) {
+    .boutique-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-text {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+        margin: 0 auto 1rem;
+    }
+    
+    .hero-text p {
+        margin: 0 auto 2rem;
+    }
+    
     .hero-image {
         padding: 1rem;
+        animation: none;
+    }
+    
+    .hero-image img {
+        max-width: 300px;
+    }
+    
+    .best-sellers,
+    .shop-shoe,
+    .valeurs,
+    .boutique-products {
+        padding: 2rem 1rem;
+    }
+    
+    .product-grid,
+    .boutique-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .gallery {
+        padding: 2rem 1rem;
+    }
+    
+    .gallery-grid {
+        gap: 1rem;
+    }
+    
+    .vision {
+        padding: 2rem 1rem;
+    }
+    
+    .vision-text {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .vision-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Responsive Petit Mobile (<= 480px) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .best-sellers h2,
+    .shop-shoe h2,
+    .valeurs h2,
+    .boutique-products h2,
+    .gallery h2,
+    .vision-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pagination ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }

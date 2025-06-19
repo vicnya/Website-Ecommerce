@@ -1,4 +1,3 @@
-
 /* Footer */
 footer {
   background-color: var(--background);
@@ -13,47 +12,164 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
 }
 
 .footer-col {
   flex: 1;
   min-width: 200px;
+  padding: 0 1rem;
 }
 
 .footer-col h3 {
   color: var(--primary);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
 }
 
 .footer-col p,
 .footer-col a {
   color: var(--white);
   text-decoration: none;
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
   display: block;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.6;
 }
 
 .footer-col a:hover {
   color: var(--primary);
+  transform: translateX(5px);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .footer-col i {
   font-size: 1.4rem;
-  margin-right: 1rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-col i:hover {
   color: var(--primary);
+  transform: translateY(-3px);
 }
 
 footer .copyright {
   text-align: center;
   color: var(--alt);
   font-size: 0.9rem;
-  border-top: 1px solid var(--alt);
-  padding-top: 1rem;
+  border-top: 1px solid rgba(var(--alt-rgb), 0.3);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* Responsive Tablette (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    gap: 1.5rem;
+  }
+  
+  .footer-col {
+    min-width: 180px;
+    flex: 1 1 40%;
+  }
+  
+  .footer-col:last-child {
+    flex-basis: 100%;
+    margin-top: 1rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Responsive Mobile (480px - 767px) */
+@media screen and (max-width: 767px) {
+  footer {
+    padding: 2rem 1.5rem 1rem;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-col {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .footer-col h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-links {
+    align-items: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  footer .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive Petit Mobile (<= 479px) */
+@media screen and (max-width: 479px) {
+  footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .footer-col h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col p,
+  .footer-col a {
+    font-size: 0.9rem;
+    margin: 0.6rem 0;
+  }
+  
+  .social-links {
+    gap: 0.8rem;
+  }
+  
+  .footer-col i {
+    font-size: 1.2rem;
+  }
 }

@@ -13,3 +13,9 @@ body {
   height: 200vh;
   font-family: var(--typo-main);
 }
+
+html, body {
+  height: 100%;
+}
+
+

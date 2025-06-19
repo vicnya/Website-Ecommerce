@@ -71,9 +71,17 @@
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Produit Best sellers */
@@ -378,7 +386,7 @@
 
 .vision-text p {
     margin: 1rem 0 2rem;
-    color: #444;
+    color: var(--background);
     max-width: 500px;
     line-height: 1.6;
 }
@@ -404,23 +412,23 @@
         height: auto;
         padding: 3rem 2rem;
     }
-    
+
     .hero-text h1 {
         font-size: 2.4rem;
     }
-    
+
     .hero-text p {
         font-size: 1.1rem;
     }
-    
+
     .boutique-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    
+
     .shoe-grid {
         flex-direction: column;
     }
-    
+
     .shoe-image {
         order: -1;
     }
@@ -433,60 +441,60 @@
         text-align: center;
         padding: 2rem 1rem;
     }
-    
+
     .hero-text {
         padding: 1rem;
         margin-bottom: 2rem;
     }
-    
+
     .hero-text h1 {
         font-size: 2rem;
         margin: 0 auto 1rem;
     }
-    
+
     .hero-text p {
         margin: 0 auto 2rem;
     }
-    
+
     .hero-image {
         padding: 1rem;
         animation: none;
     }
-    
+
     .hero-image img {
         max-width: 300px;
     }
-    
+
     .best-sellers,
     .shop-shoe,
     .valeurs,
     .boutique-products {
         padding: 2rem 1rem;
     }
-    
+
     .product-grid,
     .boutique-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1.5rem;
     }
-    
+
     .gallery {
         padding: 2rem 1rem;
     }
-    
+
     .gallery-grid {
         gap: 1rem;
     }
-    
+
     .vision {
         padding: 2rem 1rem;
     }
-    
+
     .vision-text {
         text-align: center;
         margin: 0 auto;
     }
-    
+
     .vision-text p {
         margin-left: auto;
         margin-right: auto;
@@ -498,11 +506,11 @@
     .hero-text h1 {
         font-size: 1.8rem;
     }
-    
+
     .hero-text p {
         font-size: 1rem;
     }
-    
+
     .best-sellers h2,
     .shop-shoe h2,
     .valeurs h2,
@@ -511,21 +519,21 @@
     .vision-text h2 {
         font-size: 1.6rem;
     }
-    
+
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .pagination ul {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
-    
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }

@@ -212,7 +212,7 @@
 
 .skill-bar {
   height: 10px;
-  background: #e0e0e0;
+  background: var(--alt);
   border-radius: 5px;
   margin-bottom: 0.5rem;
   overflow: hidden;
